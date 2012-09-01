@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+}
+
+#links {
+  max-width: 600px;
+  margin: 10px auto 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#links > li {
+  padding: 5px 10px;
+  margin: 0;
+  font-family: 'Actor', sans-serif;
+  font-size: 24px;
+  list-style: none;
+  position: relative;
+  border: 1px dotted transparent;
+  border-bottom-color: #ddd;
+  background: white;
+}
+
+
+#links > li.goup {
+  -webkit-transform: translateY(-77px);
+       -o-transform: translateY(-77px);
+          transform: translateY(-77px);
+}
+
+#links > li.godown {
+  -webkit-transform: translateY(77px);
+       -o-transform: translateY(77px);
+          transform: translateY(77px);
+}
+
+#links > li.floating {
+  border-color: #F06!important;
+  z-index: 42;
+}
+
+#links > li.floating + li {
+  border-top-color: #ddd;
+}
+
+#links > li:last-of-type {
+  border-bottom-color: transparent;
+}
+
+#links > li > a > * {
+  vertical-align: middle;
+}
+
+#links > li > a {
+  text-decoration: none!important;
+  color: #666 !important;
+  display: inline-block;
+  width: 100%;
+}
+
+.favicon {
+  width: 64px; height: 64px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  background: #f4f1f1;
+}
+
+.favicon:after {
+  content: ""; display: inline-block; position: absolute;
+  top: 0px; left: 0px;
+  width: 56px; height: 56px;
+  border: 4px solid #f4f1f1;
+  xoutline: 1px solid #ddd;
+
+  background-image:
+  linear-gradient(to right, transparent 3px, rgba(255,255,255,0.1) 3px),
+  linear-gradient(to bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+  background-image:
+  -webkit-linear-gradient(right, transparent 3px, rgba(255,255,255,0.1) 3px),
+  -webkit-linear-gradient(bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+  background-image:
+  -o-linear-gradient(right, transparent 3px, rgba(255,255,255,0.1) 3px),
+  -o-linear-gradient(bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+  background-size: 4px 100%, 100% 4px;
+}
+
+.favicon > img {
+  image-rendering: -moz-crisp-edges;
+}
+
+/* -- Buttons -- */
+
+.editbutton {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 50px;
+  font-family: 'Actor', sans-serif;
+  font-size: 24px;
+  background: transparent;
+  border: 0;
+  color: #333;
+}
+
+body.editmode .editbutton.start,
+body:not(.editmode) .editbutton.done {
+  display: none;
+}
+
+.deletebutton, .reorderbutton {
+  position: absolute;
+  background: white;
+  width: 72px;
+  height: 72px;
+  background-size: 36px 36px;
+  background-position: 18px 18px;
+  background-repeat: no-repeat;
+  border-left: 1px dotted #ddd;
+  transform: translateX(148px);
+  transition: 500ms transform ease;
+
+  -webkit-transform: translateX(148px);
+  -webkit-transition: 500ms -webkit-transform ease;
+  -o-transform: translateX(148px);
+  -o-transition: 500ms -o-transform ease;
+}
+
+body.editmode .deletebutton,
+body.editmode .reorderbutton {
+  transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+}
+
+.xxx-deletebutton:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 74px;
+  margin-left: -21px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(255,255,255,0), white 90%);
+  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), white 90%);
+  background-image: -o-linear-gradient(left, rgba(255,255,255,0), white 90%);
+}
+
+.deletebutton {
+  cursor: pointer;
+  top: 0;
+  right: 72px;
+  background-image: url(imgs/delete.svg);
+}
+
+.reorderbutton {
+  cursor: move;
+  top: 0;
+  right: 0;
+  background-image: url(imgs/dnd.svg);
+}
+
+@media (min-width: 800px) {
+  body:not(.editmode) #links > li {
+    border-bottom-color: transparent;
+  }
+
+  .editbutton {
+    width: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    color: #999;
+  }
+
+  .editbutton:hover {
+    color: #000;
+  }
+
+}
+
+
