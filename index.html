@@ -10,7 +10,13 @@
 
 <title>7links.io</title>
 
+<script src="helpers.js"></script>
 <script src="engine.js"></script>
+<script src="https://login.persona.org/include.js"></script>
+<script src="network.js"></script>
+
+<img src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" onclick="navigator.id.request()">login</button>
+<button onclick="navigator.id.logout()">logout</button>
 
 <ul id="links">
   <li>
