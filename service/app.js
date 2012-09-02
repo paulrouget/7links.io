@@ -2,7 +2,7 @@
 
 const port = 8000;
 const valueSize = 2048;
-const origin = "http://192.168.1.21";
+const origin = "http://7links.io";
 const privateKeyFile = "/home/paul/7links.cert/privatekey.pem";
 const certificateFile = "/home/paul/7links.cert/certificate.pem";
 
@@ -89,13 +89,6 @@ https.createServer({key: privateKey, cert: certificate},
     if (req.url == "/save") {
       var body = "";
       req.on('data', function(chunk) { body += chunk }).on('end', function() {
-        if (db.isAssertionRegistered(assertion)) {
-          console.log("Known session: " + db.getEmailForAssertion(assertion));
-        } else {
-          console.log("Unknown session");
-        }
-
-
         try {
           body = JSON.parse(body);
         } catch(e) {
@@ -103,7 +96,7 @@ https.createServer({key: privateKey, cert: certificate},
           res.end("body is malformated");
           return;
         }
-        if (!db.isAssertionRegistered(assertion)) {
+        if (!db.isAssertionRegistered(body.assertion)) {
           res.writeHead(401, headers);
           res.end("Unknow user. You might want to logout and login again.");
           return;
