@@ -1,5 +1,5 @@
-const LOCAL_SYNC_INTERVAL = 5000;
-const REMOTE_SYNC_INTERVAL = 5000;
+const LOCAL_SYNC_INTERVAL = 10000;
+const REMOTE_SYNC_INTERVAL = 60000;
 
 const DEFAULT_lINKS = [
   {icon: "http://facebook.com/favicon.ico", title: "Facebook", href: "http://facebook.com"},
