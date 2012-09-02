@@ -11,12 +11,13 @@
 <title>7links.io</title>
 
 <script src="helpers.js"></script>
-<script src="engine.js"></script>
+<script src="log.js"></script>
+<script src="UI.js"></script>
+<script src="local.js"></script>
 <script src="https://login.persona.org/include.js"></script>
-<script src="network.js"></script>
+<script src="remote.js"></script>
 
-<img src="https://developer.mozilla.org/files/3967/plain_sign_in_black.png" onclick="navigator.id.request()">login</button>
-<button onclick="navigator.id.logout()">logout</button>
+<div id="logs"></div>
 
 <ul id="links">
   <li>
@@ -28,5 +29,6 @@
   <li>
 </ul>
 
-<button class="editbutton start" onclick="startEditMode()">edit</button>
-<button class="editbutton done" onclick="doneEditMode()">done</button>
+<button class="editbutton start" onclick="UI.startEditMode()">edit</button>
+<button class="editbutton done" onclick="UI.stopEditMode()">done</button>
+<div id="personnaButton" onclick="UI.toggleLogin()">login</button>

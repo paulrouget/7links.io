@@ -1,10 +1,13 @@
 body {
   margin: 0;
+  max-width: 600px;
+  margin: 10px auto 0;
+  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/grey.png);
+  font-family: 'Actor', sans-serif;
+  font-size: 24px;
 }
 
 #links {
-  max-width: 600px;
-  margin: 10px auto 0;
   padding: 0;
   overflow: hidden;
 }
@@ -12,13 +15,10 @@ body {
 #links > li {
   padding: 5px 10px;
   margin: 0;
-  font-family: 'Actor', sans-serif;
-  font-size: 24px;
   list-style: none;
   position: relative;
   border: 1px dotted transparent;
   border-bottom-color: #ddd;
-  background: white;
 }
 
 
@@ -35,6 +35,7 @@ body {
 }
 
 #links > li.floating {
+  background: white;
   border-color: #F06!important;
   z-index: 42;
 }
@@ -96,7 +97,6 @@ body {
   display: block;
   width: 100%;
   padding: 50px;
-  font-family: 'Actor', sans-serif;
   font-size: 24px;
   background: transparent;
   border: 0;
@@ -176,7 +176,34 @@ body.editmode .reorderbutton {
   .editbutton:hover {
     color: #000;
   }
-
 }
 
+#personnaButton {
+  margin: 10px;
+  border-radius: 3px;
+  height: 62px;
+  line-height: 62px;
+  padding-left: 100px;
+  background-color: white;
+  background-image: url(imgs/persona.png),
+                    linear-gradient(to bottom, #eee 50%, #d2d2d2 50%);
+  background-repeat: no-repeat;
+  background-size: 81px 62px, 100% 100%;
+  cursor: pointer;
+  color: #666;
+}
 
+#personnaButton:hover {
+  color: black;
+}
+
+#logs {
+  background: white;
+}
+#logs > h1 {
+  font-size: 20px;
+}
+#logs > p {
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
