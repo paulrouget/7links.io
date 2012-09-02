@@ -3,7 +3,7 @@
 // http://www.quirksmode.org/js/xmlhttp.html
 
 (function(owner) {
-  function sendRequest(url,callback,postData) {
+  function sendRequest(url, callback, postData, method) {
     var req = createXMLHTTPObject();
     if (!req) return;
     var method = (postData) ? "POST" : "GET";
@@ -11,7 +11,7 @@
     req.setRequestHeader('User-Agent','XMLHTTP/1.0');
     if (postData)
       req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-    req.onreadystatechange = function () {
+      req.onreadystatechange = function () {
       if (req.readyState != 4) return;
       if (req.status != 200 && req.status != 304) {
         callback("HTTP Error: " + req.status, req);
@@ -63,10 +63,21 @@
   owner.$$ = $$;
 })(window);
 
-// parseURL -------------------------------------------------------------------
-// From http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
+
+
+// touchSupported -------------------------------------------------------------
 
 (function(owner) {
+  function touchSupported() {
+    return !(window.ontouchstart === undefined);
+  }
+
+  owner.touchSupported = touchSupported;
+})(window);
+
+// guessFaviconURL ------------------------------------------------------------
+(function(owner) {
+  // From http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
   function parseURL(url) {
       var a =  document.createElement('a');
       a.href = url;
@@ -94,15 +105,12 @@
           segments: a.pathname.replace(/^\//,'').split('/')
       };
   }
-  owner.parseURL = parseURL;
-})(window);
 
-// touchSupported -------------------------------------------------------------
-
-(function(owner) {
-  function touchSupported() {
-    return !(window.ontouchstart === undefined);
+  function guessFaviconURL(url) {
+    var url = parseURL(url);
+    var icon = [url.protocol, "//" + url.host, url.port].join(":");
+    icon += "/favicon.ico"; // lame
+    return icon;
   }
-
-  owner.touchSupported = touchSupported;
+  owner.guessFaviconURL = guessFaviconURL;
 })(window);
