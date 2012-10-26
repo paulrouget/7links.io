@@ -35,9 +35,9 @@ var UI = {
     var title = prompt("title:");
     if (!title) return alert("Need a title");
 
-    var icon = guessIconURLs(urlStr);
+    var icons = guessIconURLs(urlStr);
 
-    var link = local.setLink({icon: icon, title: title, href: urlStr}, position);
+    var link = local.setLink({icons: icons, title: title, href: urlStr}, position);
     this._buildOneLink(link, position);
   },
 
