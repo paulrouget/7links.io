@@ -14,7 +14,6 @@ body {
 }
 
 #links > li {
-  font-size: 18px;
   padding: 5px 10px;
   margin: 0;
   list-style: none;
@@ -27,26 +26,14 @@ body {
   background-image: -webkit-linear-gradient(top, rgb(55,55,55), rgb(51,51,51));
 }
 
-
-#links > li.goup {
-  -webkit-transform: translateY(-77px);
-       -o-transform: translateY(-77px);
-          transform: translateY(-77px);
-}
-
-#links > li.godown {
-  -webkit-transform: translateY(77px);
-       -o-transform: translateY(77px);
-          transform: translateY(77px);
-}
-
-#links > li.floating {
-  background: blue;
-  z-index: 42;
-}
-
-#links > li > a > * {
+.favicon, .text {
+  display: inline-block;
   vertical-align: middle;
+  height: 64px;
+}
+
+.text > span {
+  display: block;
 }
 
 #links > li > a {
@@ -56,9 +43,16 @@ body {
   width: 100%;
 }
 
+.title {
+  font-size: 18px;
+}
+
+.href {
+  font-size: 11px;
+}
+
 .favicon {
-  width: 64px; height: 64px;
-  display: inline-block;
+  width: 64px;
   margin-right: 10px;
   position: relative;
   background: #f4f1f1;
@@ -69,17 +63,14 @@ body {
   top: 0px; left: 0px;
   width: 56px; height: 56px;
   border: 4px solid #f4f1f1;
-  xoutline: 1px solid #ddd;
 
   background-image:
-  linear-gradient(to right, transparent 3px, rgba(255,255,255,0.1) 3px),
-  linear-gradient(to bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+    linear-gradient(to right, transparent 3px, rgba(255,255,255,0.1) 3px),
+    linear-gradient(to bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
   background-image:
-  -webkit-linear-gradient(right, transparent 3px, rgba(255,255,255,0.1) 3px),
-  -webkit-linear-gradient(bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
-  background-image:
-  -o-linear-gradient(right, transparent 3px, rgba(255,255,255,0.1) 3px),
-  -o-linear-gradient(bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+    -webkit-linear-gradient(right, transparent 3px, rgba(255,255,255,0.1) 3px),
+    -webkit-linear-gradient(bottom, transparent 3px, rgba(255,255,255,0.1) 3px);
+
   background-size: 4px 100%, 100% 4px;
 }
 
@@ -87,7 +78,62 @@ body {
   image-rendering: -moz-crisp-edges;
 }
 
-/* -- Buttons -- */
+/* Responsive */
+
+@media (min-width: 800px) {
+  body:not(.editmode) #links > li {
+    border-bottom-color: transparent;
+  }
+
+  .editbutton {
+    width: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    color: #999;
+  }
+
+  .editbutton:hover {
+    color: #000;
+  }
+}
+
+/* Personna */
+
+#personnaButton {
+  margin: 10px;
+  border-radius: 3px;
+  height: 62px;
+  line-height: 62px;
+  padding-left: 100px;
+  background-color: white;
+  background-image: url(imgs/persona.png),
+                    linear-gradient(to bottom, #eee 50%, #d2d2d2 50%);
+  background-repeat: no-repeat;
+  background-size: 81px 62px, 100% 100%;
+  cursor: pointer;
+  color: #666;
+}
+
+#personnaButton:hover {
+  color: black;
+}
+
+/* Logs */
+
+#logs {
+  background: white;
+}
+#logs > h1 {
+  font-size: 20px;
+}
+#logs > p {
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+
+/* Edition */
 
 .editbutton {
   cursor: pointer;
@@ -130,17 +176,6 @@ body.editmode .reorderbutton {
   -o-transform: none;
 }
 
-.xxx-deletebutton:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 74px;
-  margin-left: -21px;
-  background-color: transparent;
-  background-image: linear-gradient(to right, rgba(255,255,255,0), white 90%);
-  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), white 90%);
-  background-image: -o-linear-gradient(left, rgba(255,255,255,0), white 90%);
-}
 
 .deletebutton {
   cursor: pointer;
@@ -156,51 +191,22 @@ body.editmode .reorderbutton {
   background-image: url(imgs/dnd.svg);
 }
 
-@media (min-width: 800px) {
-  body:not(.editmode) #links > li {
-    border-bottom-color: transparent;
-  }
 
-  .editbutton {
-    width: 100px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    color: #999;
-  }
-
-  .editbutton:hover {
-    color: #000;
-  }
+#links > li.goup {
+  -webkit-transform: translateY(-77px);
+       -o-transform: translateY(-77px);
+          transform: translateY(-77px);
 }
 
-#personnaButton {
-  margin: 10px;
-  border-radius: 3px;
-  height: 62px;
-  line-height: 62px;
-  padding-left: 100px;
-  background-color: white;
-  background-image: url(imgs/persona.png),
-                    linear-gradient(to bottom, #eee 50%, #d2d2d2 50%);
-  background-repeat: no-repeat;
-  background-size: 81px 62px, 100% 100%;
-  cursor: pointer;
-  color: #666;
+#links > li.godown {
+  -webkit-transform: translateY(77px);
+       -o-transform: translateY(77px);
+          transform: translateY(77px);
 }
 
-#personnaButton:hover {
-  color: black;
+#links > li.floating {
+  background: blue;
+  z-index: 42;
 }
 
-#logs {
-  background: white;
-}
-#logs > h1 {
-  font-size: 20px;
-}
-#logs > p {
-  font-size: 14px;
-  border-bottom: 1px solid black;
-}
+
