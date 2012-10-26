@@ -59,7 +59,7 @@ body {
   /*background-size: 48px 48px, 16px 16px;*/
   /*background-position: top left, center center;*/
   background-size: 48px 48px;
-  background-position: center center;
+  background-position: top left;
   background-repeat: no-repeat;
 
   image-rendering: -moz-crisp-edges;         /* Firefox */
