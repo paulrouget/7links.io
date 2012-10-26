@@ -58,8 +58,10 @@ body {
   border-radius: 50%;
   /*background-size: 48px 48px, 16px 16px;*/
   /*background-position: top left, center center;*/
+  background-size: 48px 48px;
   background-position: center center;
   background-repeat: no-repeat;
+  image-rendering: optimizeSpeed;
 }
 
 /*
