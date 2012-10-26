@@ -85,8 +85,10 @@ var UI = {
     var li = $$("#links > li")[position];
     var html = "";
     if (link.href) {
+      var parsedURL = parseURL(link.href);
+      parsedURL = parsedURL.host + parsedURL.path;
       html = '<a target="_blank" href="' + link.href + '">';
-      html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + link.href + '</span></div></a>';
+      html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
     } else {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
       html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span></div></a>';
