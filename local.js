@@ -2,7 +2,7 @@ const LOCAL_SYNC_INTERVAL = 10000;
 const REMOTE_SYNC_INTERVAL = 60000;
 
 const DEFAULT_lINKS = [
-  {icons: ["http://facebook.com/apple-touch-icon.png.ico", "http://facebook.com/favicon.ico",], title: "Facebook", href: "http://facebook.com"},
+  {icons: ["http://facebook.com/favicon.ico", "http://facebook.com/apple-touch-icon.png.ico"], title: "Facebook", href: "http://facebook.com"},
   {icons: ["http://paulrouget.com/favicon.ico", "http://paulrouget.com/apple-touch-icon.png.ico"], title: "Paul Rouget's blog", href: "http://paulrouget.com"},
   {icons: ["http://news.ycombinator.com/favicon.ico", "http://news.ycombinator.com/apple-touch-icon.png.ico"], title: "Hackernews", href: "http://news.ycombinator.com"},
   {icons: ["http://duckduckgo.com/favicon.ico", "http://duckduckgo.com/apple-touch-icon.png.ico"], title: "DuckDuckGo", href: "http://duckduckgo.com"},
