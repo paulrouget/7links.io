@@ -6,9 +6,9 @@ const DEFAULT_lINKS = [
   {icons: ["http://paulrouget.com/apple-touch-icon.png", "http://paulrouget.com/favicon.ico"], title: "Paul Rouget's blog", href: "http://paulrouget.com"},
   {icons: ["http://news.ycombinator.com/apple-touch-icon.png", "http://news.ycombinator.com/favicon.ico"], title: "Hackernews", href: "http://news.ycombinator.com"},
   {icons: ["http://duckduckgo.com/apple-touch-icon.png", "http://duckduckgo.com/favicon.ico"], title: "DuckDuckGo", href: "http://duckduckgo.com"},
-  {icons: ["http://i.imgur.com/UJgWf.png"], title: "Twitter", href: "http://mobile.twitter.com"},
+  {icons: ["http://twitter.com/apple-touch-icon.png", "http://twitter.com/favicon.ico"], title: "Twitter", href: "http://mobile.twitter.com"},
   {icons: ["http://reddit.com/apple-touch-icon.png", "http://reddit.com/favicon.ico"], title: "Reddit", href: "http://reddit.com/.compact"},
-  {icons: ["http://www.google.com/reader/ui/apple-touch-icon.png",, "http://www.google.com/reader/ui/favicon.ico",], title: "Google Reader", href: "http://www.google.com/reader/"}
+  {icons: ["http://www.google.com/reader/ui/apple-touch-icon.png", "http://www.google.com/reader/ui/favicon.ico",], title: "Google Reader", href: "http://www.google.com/reader/"}
 ];
 
 var local = {};
