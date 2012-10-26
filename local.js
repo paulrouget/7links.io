@@ -2,13 +2,13 @@ const LOCAL_SYNC_INTERVAL = 10000;
 const REMOTE_SYNC_INTERVAL = 60000;
 
 const DEFAULT_lINKS = [
-  {icons: ["http://facebook.com/apple-touch-icon.png.ico", "http://facebook.com/favicon.ico"], title: "Facebook", href: "http://facebook.com"},
-  {icons: ["http://paulrouget.com/apple-touch-icon.png.ico", "http://paulrouget.com/favicon.ico"], title: "Paul Rouget's blog", href: "http://paulrouget.com"},
-  {icons: ["http://news.ycombinator.com/apple-touch-icon.png.ico", "http://news.ycombinator.com/favicon.ico"], title: "Hackernews", href: "http://news.ycombinator.com"},
-  {icons: ["http://duckduckgo.com/apple-touch-icon.png.ico", "http://duckduckgo.com/favicon.ico"], title: "DuckDuckGo", href: "http://duckduckgo.com"},
-  {icons: ["http://twitter.com/apple-touch-icon.png.ico", "http://twitter.com/favicon.ico"], title: "Twitter", href: "http://mobile.twitter.com"},
-  {icons: ["http://reddit.com/apple-touch-icon.png.ico", "http://reddit.com/favicon.ico"], title: "Reddit", href: "http://reddit.com/.compact"},
-  {icons: ["http://www.google.com/reader/ui/apple-touch-icon.png.ico",, "http://www.google.com/reader/ui/favicon.ico",], title: "Google Reader", href: "http://www.google.com/reader/"}
+  {icons: ["http://facebook.com/apple-touch-icon.png.ico", "http://facebook.com/favicon.ico",], title: "Facebook", href: "http://facebook.com"},
+  {icons: ["http://paulrouget.com/favicon.ico", "http://paulrouget.com/apple-touch-icon.png.ico"], title: "Paul Rouget's blog", href: "http://paulrouget.com"},
+  {icons: ["http://news.ycombinator.com/favicon.ico", "http://news.ycombinator.com/apple-touch-icon.png.ico"], title: "Hackernews", href: "http://news.ycombinator.com"},
+  {icons: ["http://duckduckgo.com/favicon.ico", "http://duckduckgo.com/apple-touch-icon.png.ico"], title: "DuckDuckGo", href: "http://duckduckgo.com"},
+  {icons: ["http://twitter.com/favicon.ico", "http://twitter.com/apple-touch-icon.png.ico"], title: "Twitter", href: "http://mobile.twitter.com"},
+  {icons: ["http://reddit.com/favicon.ico", "http://reddit.com/apple-touch-icon.png.ico"], title: "Reddit", href: "http://reddit.com/.compact"},
+  {icons: ["http://www.google.com/reader/ui/favicon.ico",  "http://www.google.com/reader/ui/apple-touch-icon.png.ico",], title: "Google Reader", href: "http://www.google.com/reader/"}
 ];
 
 var local = {};
