@@ -61,7 +61,11 @@ body {
   background-size: 48px 48px;
   background-position: center center;
   background-repeat: no-repeat;
-  image-rendering: optimizeSpeed;
+
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
 }
 
 /*
