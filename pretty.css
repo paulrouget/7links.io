@@ -29,7 +29,7 @@ body {
 .favicon, .text {
   display: inline-block;
   vertical-align: middle;
-  height: 64px;
+  height: 48px;
 }
 
 .text > span {
@@ -52,11 +52,13 @@ body {
 }
 
 .favicon {
-  width: 64px;
+  width: 48px;
   margin-right: 10px;
   position: relative;
   border-radius: 50%;
-  background-size: 64px 64px;
+  background-size: 16px 16px, 48px 48px;
+  background-position: center center, top left;
+  background-repeat: no-repeat;
 }
 
 /*
