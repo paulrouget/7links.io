@@ -35,7 +35,7 @@ var UI = {
     var title = prompt("title:");
     if (!title) return alert("Need a title");
 
-    var icon = guessFaviconURL(urlStr);
+    var icon = guessIconURLs(urlStr);
 
     var link = local.setLink({icon: icon, title: title, href: urlStr}, position);
     this._buildOneLink(link, position);
@@ -95,10 +95,12 @@ var UI = {
     html += '</div><div class="reorderbutton"></div>';
     li.innerHTML = html;
     this._makeOneLinkOrderAble(li);
-    var iconurl = link.icon;
     li.dataset.position = position;
-    var img = li.querySelector(".favicon > img");
-    img.src = iconurl;
+    var iconurls = link.icons.map(function(url) {
+      return "url(" + url + ")";
+    }).join(",");
+    var favicon = li.querySelector(".favicon");
+    favicon.setAttribute("style", "background-image:" + iconurls);
   },
 
 

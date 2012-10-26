@@ -55,10 +55,11 @@ body {
   width: 64px;
   margin-right: 10px;
   position: relative;
-  background: #f4f1f1;
   border-radius: 50%;
+  background-size: 64px 64px;
 }
 
+/*
 .favicon:after {
   content: ""; display: inline-block; position: absolute;
   top: 0px; left: 0px;
@@ -74,10 +75,7 @@ body {
 
   background-size: 4px 100%, 100% 4px;
 }
-
-.favicon > img {
-  image-rendering: -moz-crisp-edges;
-}
+*/
 
 /* Responsive */
 

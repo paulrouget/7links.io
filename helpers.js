@@ -75,7 +75,7 @@
   owner.touchSupported = touchSupported;
 })(window);
 
-// guessFaviconURL ------------------------------------------------------------
+// guessIconURLs --------------------------------------------------------------
 (function(owner) {
   // From http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
   function parseURL(url) {
@@ -106,11 +106,12 @@
       };
   }
 
-  function guessFaviconURL(url) {
+  function guessIconURLs(url) {
     var url = parseURL(url);
-    var icon = [url.protocol, "//" + url.host, url.port].join(":");
-    icon += "/favicon.ico"; // lame
-    return icon;
+    var root = [url.protocol, "//" + url.host, url.port].join(":");
+
+    var icons = [root + "/apple-touch-icon.png", root + "/favicon.ico"];
+    return icons;
   }
-  owner.guessFaviconURL = guessFaviconURL;
+  owner.guessIconURLs = guessIconURLs;
 })(window);
