@@ -104,7 +104,7 @@ var UI = {
     } else {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
     }
-    html += '<div class="icons"><img class="bigicon"><img class="smallicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
+    html += '<div class="icons"><img class="smallicon"><img class="bigicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
     html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)">';
     html += '</div><div class="reorderbutton"></div>';
     li.innerHTML = html;
