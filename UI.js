@@ -234,4 +234,7 @@ var UI = {
 
 
 
-window.onload = function() {UI.init()}
+window.onload = function() {
+  console.log(local);
+  UI.init()
+}
