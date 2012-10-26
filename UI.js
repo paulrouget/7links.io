@@ -3,6 +3,7 @@ var UI = {
   // PUBLIC -------------------------------------------------------------------
 
   init: function() {
+    console.log(local);
     this._moveLink = this._moveLink.bind(this);
     this._onTouchStart = this._onTouchStart.bind(this);
     this._stopSorting = this._stopSorting.bind(this);
@@ -234,4 +235,3 @@ var UI = {
 
 
 window.onload = function() {UI.init()}
-console.log("loaded");
