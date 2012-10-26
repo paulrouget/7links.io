@@ -81,13 +81,17 @@ var UI = {
 
   _buildOneLink: function(link, position) {
     function getIconURLs(url) {
-      var url = parseURL(url);
-      var root = [url.protocol, "//" + url.host, url.port].join(":");
-      var icons = {big: root + "/apple-touch-icon.png", small: root + "/favicon.ico"};
-      if (url.host in BUILTIN_ICONS) {
-        icons.big = BUILTIN_ICONS[url.host];
+      if (!url) {
+        return {big: "", small: ""}
+      } else {
+        var url = parseURL(url);
+        var root = [url.protocol, "//" + url.host, url.port].join(":");
+        var icons = {big: root + "/apple-touch-icon.png", small: root + "/favicon.ico"};
+        if (url.host in BUILTIN_ICONS) {
+          icons.big = BUILTIN_ICONS[url.host];
+        }
+        return icons;
       }
-      return icons;
     }
 
     var li = $$("#links > li")[position];
@@ -107,7 +111,7 @@ var UI = {
     this._makeOneLinkOrderAble(li);
     li.dataset.position = position;
 
-    var icons = getIconURLs(urlStr);
+    var icons = getIconURLs(link.href);
     li.querySelector(".bigicon").src = icons.big;
     li.querySelector(".smallicon").src = icons.small;
   },
