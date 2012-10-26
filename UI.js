@@ -86,10 +86,11 @@ var UI = {
     var html = "";
     if (link.href) {
       html = '<a target="_blank" href="' + link.href + '">';
+      html += '<div class="favicon"><img width="64" height="64"></img></div><span class="title">' + link.title + '</span><span class="href">' + link.href + '</span></a>';
     } else {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
+      html += '<div class="favicon"><img width="64" height="64"></img></div><span class="title">' + link.title + '</span><span class="href">…</span></a>';
     }
-    html += '<div class="favicon"><img width="64" height="64"></img></div>' + link.title + '</a>';
     html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)">';
     html += '</div><div class="reorderbutton"></div>';
     li.innerHTML = html;
