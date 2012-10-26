@@ -214,5 +214,6 @@ body.editmode .reorderbutton {
   width: 34px;
   height: 26px;
   border: none;
+  background-color: transparent;
   background-image: url(assets/signin-button.png);
 }
