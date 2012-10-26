@@ -92,10 +92,6 @@ body {
 /* Responsive */
 
 @media (min-width: 800px) {
-  body:not(.editmode) #links > li {
-    border-bottom-color: transparent;
-  }
-
   .editbutton {
     width: 100px;
     position: fixed;
