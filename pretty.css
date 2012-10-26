@@ -68,7 +68,7 @@ body {
 
   background-color: rgb(42,42,42);
 
-  box-shadow: 0 1px 1px red, 0 -1px 1px blue;
+  box-shadow: 0 1px 1px rgb(77,77,77), 0 -1px 1px rgb(36,36,36);
 }
 
 /*
