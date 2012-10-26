@@ -217,3 +217,7 @@ body.editmode .reorderbutton {
   background-color: transparent;
   background-image: url(assets/signin-button.png);
 }
+
+#login:active {
+  transform: translateY(1px);
+}
