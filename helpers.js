@@ -75,9 +75,8 @@
   owner.touchSupported = touchSupported;
 })(window);
 
-// guessIconURLs --------------------------------------------------------------
-(function(owner) {
-  // From http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
+
+(function (owner) {
   function parseURL(url) {
       var a =  document.createElement('a');
       a.href = url;
@@ -105,7 +104,13 @@
           segments: a.pathname.replace(/^\//,'').split('/')
       };
   }
+  owner.parseURL = parseURL;
+})(window);
 
+
+// guessIconURLs --------------------------------------------------------------
+(function(owner) {
+  // From http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
   function guessIconURLs(url) {
     var url = parseURL(url);
     var root = [url.protocol, "//" + url.host, url.port].join(":");
