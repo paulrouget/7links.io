@@ -88,8 +88,7 @@ var UI = {
         var root = [url.protocol, "//" + url.host, url.port].join(":");
         var icons;
         if (url.host in BUILTIN_ICONS) {
-          icons = {};
-          icons.big = BUILTIN_ICONS[url.host];
+          icons = {big: BUILTIN_ICONS[url.host]};
         } else {
           icons = {big: root + "/apple-touch-icon.png",
                    small: root + "/favicon.ico"};
