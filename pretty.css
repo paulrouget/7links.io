@@ -1,5 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #222;
+}
+
 body {
   margin: 0 auto;
   max-width: 320px;
@@ -10,21 +19,35 @@ body {
 
 header {
   height: 44px;
-  padding: 10px 16px 0;
   background-image: url(assets/logo-inapp.png);
   background-size: 28px 33px;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
+#login, #edit {
+  display:  block;
+  height: 100%;
+  width: 56px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#login {
+  background-image: url(assets/signin-button.png);
+  float: left;
+}
+
+#edit {
+  float: right;
+}
+
 #links {
-  padding: 0;
   overflow: hidden;
 }
 
 #links > li {
   padding: 5px 10px;
-  margin: 0;
   list-style: none;
   position: relative;
   border-width: 1px 0;
@@ -217,16 +240,3 @@ body.editmode .reorderbutton {
 
 
 
-/* Persona button */
-
-#login {
-  width: 34px;
-  height: 26px;
-  border: none;
-  background-color: transparent;
-  background-image: url(assets/signin-button.png);
-}
-
-#login:active {
-  transform: translateY(1px);
-}
