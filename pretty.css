@@ -41,17 +41,8 @@ body {
 }
 
 #links > li.floating {
-  background: white;
-  border-color: #F06!important;
+  background: blue;
   z-index: 42;
-}
-
-#links > li.floating + li {
-  border-top-color: #ddd;
-}
-
-#links > li:last-of-type {
-  border-bottom-color: transparent;
 }
 
 #links > li > a > * {
@@ -60,7 +51,7 @@ body {
 
 #links > li > a {
   text-decoration: none!important;
-  color: #666 !important;
+  color: #efefef !important;
   display: inline-block;
   width: 100%;
 }
