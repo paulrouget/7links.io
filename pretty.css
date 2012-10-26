@@ -212,13 +212,15 @@ body.editmode .reorderbutton {
 
 /* Link body */
 
-#p2 {
+#login {
   width: 20px;
   height: 22px;
   position: relative;
+  border: none;
+  background: transparent;
 }
 
-#p2:before {
+#login:before {
   content: "";
   display: block;
   width: 20px;
@@ -236,7 +238,7 @@ body.editmode .reorderbutton {
   box-shadow: 0 1px rgba(0,0,0,0.2) inset, 0 -1px rgba(255,255,255,0.2) inset;
 }
 
-#p2:after {
+#login:after {
   content: "";
   display: block;
   width: 15.5px;
