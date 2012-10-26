@@ -55,17 +55,21 @@ body {
   width: 48px;
   margin-right: 10px;
   position: relative;
-  border-radius: 50%;
   background-color: rgb(42,42,42);
   box-shadow: 0 1px 1px rgb(77,77,77), 0 -1px 1px rgb(36,36,36);
+  border-radius: 50%;
 }
 
 .icons > img {
+  border-radius: 50%;
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   image-rendering: -moz-crisp-edges;         /* Firefox */
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+}
+
+.smallicon {
   image-rendering: crisp-edges;
 }
 
