@@ -37,6 +37,7 @@ body {
 }
 
 #links > li > a {
+  color: #efefef;
   text-decoration: none;
   display: inline-block;
   width: 100%;
