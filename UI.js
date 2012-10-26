@@ -35,9 +35,7 @@ var UI = {
     var title = prompt("title:");
     if (!title) return alert("Need a title");
 
-    var icons = guessIconURLs(urlStr);
-
-    var link = local.setLink({icons: icons, title: title, href: urlStr}, position);
+    var link = local.setLink({title: title, href: urlStr}, position);
     this._buildOneLink(link, position);
   },
 
@@ -82,27 +80,36 @@ var UI = {
   },
 
   _buildOneLink: function(link, position) {
+    function getIconURLs(url) {
+      var url = parseURL(url);
+      var root = [url.protocol, "//" + url.host, url.port].join(":");
+      var icons = {big: root + "/apple-touch-icon.png", small: root + "/favicon.ico"};
+      if (url.host in BUILTIN_ICONS) {
+        icons.big = BUILTIN_ICONS[url.host];
+      }
+      return icons;
+    }
+
     var li = $$("#links > li")[position];
+    var simpleURL = "";
     var html = "";
     if (link.href) {
-      var parsedURL = parseURL(link.href);
-      parsedURL = (parsedURL.host + parsedURL.path).replace(/\/$/, "");
       html = '<a target="_blank" href="' + link.href + '">';
-      html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
+      var parsedURL = parseURL(link.href);
+      simpleURL = (parsedURL.host + parsedURL.path).replace(/\/$/, "");
     } else {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
-      html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span></div></a>';
     }
+    html += '<div class="icons"><img class="bigicon"><img class="smallicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
     html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)">';
     html += '</div><div class="reorderbutton"></div>';
     li.innerHTML = html;
     this._makeOneLinkOrderAble(li);
     li.dataset.position = position;
-    var iconurls = link.icons.map(function(url) {
-      return "url(" + url + ")";
-    }).join(",");
-    var favicon = li.querySelector(".favicon");
-    favicon.setAttribute("style", "background-image:" + iconurls);
+
+    var icons = getIconURLs(urlStr);
+    li.querySelector(".bigicon").src = icons.bigicon;
+    li.querySelector(".smallicon").src = icons.smallicon;
   },
 
 

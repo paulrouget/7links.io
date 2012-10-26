@@ -1,14 +1,21 @@
 const LOCAL_SYNC_INTERVAL = 10000;
 const REMOTE_SYNC_INTERVAL = 60000;
 
+const BUILTIN_ICONS = {
+  "twitter.com": "http://i.imgur.com/UJgWfs.png",
+  "facebook.com", "http://i.imgur.com/M0Wi5s.png",
+  "duckduckgo.com", "http://i.imgur.com/xEDQcs.png",
+  "news.ycombinator.com", "http://i.imgur.com/sAbeIs.png",
+  "ihackernews.com", "http://i.imgur.com/sAbeIs.png"
+}
 const DEFAULT_lINKS = [
-  {icons: ["http://facebook.com/apple-touch-icon.png", "http://facebook.com/favicon.ico"], title: "Facebook", href: "http://facebook.com"},
-  {icons: ["http://paulrouget.com/apple-touch-icon.png", "http://paulrouget.com/favicon.ico"], title: "Paul Rouget's blog", href: "http://paulrouget.com"},
-  {icons: ["http://news.ycombinator.com/apple-touch-icon.png", "http://news.ycombinator.com/favicon.ico"], title: "Hackernews", href: "http://news.ycombinator.com"},
-  {icons: ["http://duckduckgo.com/apple-touch-icon.png", "http://duckduckgo.com/favicon.ico"], title: "DuckDuckGo", href: "http://duckduckgo.com"},
-  {icons: ["http://twitter.com/apple-touch-icon.png", "http://twitter.com/favicon.ico"], title: "Twitter", href: "http://mobile.twitter.com"},
-  {icons: ["http://reddit.com/apple-touch-icon.png", "http://reddit.com/favicon.ico"], title: "Reddit", href: "http://reddit.com/.compact"},
-  {icons: ["http://www.google.com/reader/ui/apple-touch-icon.png", "http://www.google.com/reader/ui/favicon.ico",], title: "Google Reader", href: "http://www.google.com/reader/"}
+  {title: "Facebook", href: "http://facebook.com"},
+  {title: "r/comics", href: "http://imgur.com/r/comics"},
+  {title: "Hackernews", href: "http://ihackernews.com"},
+  {title: "DuckDuckGo", href: "http://duckduckgo.com"},
+  {title: "Twitter", href: "http://mobile.twitter.com"},
+  {title: "Reddit", href: "http://reddit.com/.compact"},
+  {title: ""}
 ];
 
 var local = {};
@@ -38,7 +45,7 @@ local.saveLocaly = function() {
 }
 
 local.emptyLink = function(idx) {
-  return this.setLink({icon: "imgs/add.svg", title: ""}, idx);
+  return this.setLink({title: ""}, idx);
 }
 
 local.setLink = function(link, idx) {
