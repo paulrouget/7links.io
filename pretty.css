@@ -37,10 +37,13 @@ body {
 }
 
 #links > li > a {
-  text-decoration: none!important;
-  color: #efefef !important;
+  text-decoration: none;
   display: inline-block;
   width: 100%;
+}
+
+#links > li > a:visited {
+  color: #efefef;
 }
 
 .title {
