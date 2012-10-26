@@ -108,8 +108,8 @@ var UI = {
     li.dataset.position = position;
 
     var icons = getIconURLs(urlStr);
-    li.querySelector(".bigicon").src = icons.bigicon;
-    li.querySelector(".smallicon").src = icons.smallicon;
+    li.querySelector(".bigicon").src = icons.big;
+    li.querySelector(".smallicon").src = icons.small;
   },
 
 
