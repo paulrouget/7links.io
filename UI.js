@@ -86,7 +86,7 @@ var UI = {
     var html = "";
     if (link.href) {
       var parsedURL = parseURL(link.href);
-      parsedURL = parsedURL.host + parsedURL.path;
+      parsedURL = (parsedURL.host + parsedURL.path).replace(/\/$/, "");
       html = '<a target="_blank" href="' + link.href + '">';
       html += '<div class="favicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + parsedURL + '</span></div></a>';
     } else {
