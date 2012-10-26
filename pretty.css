@@ -215,37 +215,5 @@ body.editmode .reorderbutton {
   height: 22px;
   position: relative;
   border: none;
-  background: transparent;
-}
-
-#login:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 22px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAA4klEQVR42o2RWaqEMBRE3YaCiDjPwQGcd9CrysLv4wTyoLFD90dxqbp1EgdPRB7Kskznea6Zn/aPoKoqUUrJOI5m4l2QBfSyLHKep1zXZSae3An1fS/7vst931bGkzuhaZrsLVbGkzuheZ7lOI6HyJ2QUkqv6yrbtv0LT+6E7G0UrfBfP3lZlpoXH4ZBmHgn5Pv+KwxDfqp0XQdgJp6c/RsUBIGOokiSJDE/s21bACbe5Ozp0TdAHMdSFIXUdS1N01C2wpObPT36HifwCJzI0iX29Oh7XP0E3CB9L01TzM+i/wePv4ZE5RtAngAAAABJRU5ErkJggg==),
-              linear-gradient(to bottom, #50b8e8, #3095ce);
-  background-size: 14px 14px, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 4px 4px, 0 0;
-  box-shadow: x;
-  border-radius: 2px 0 0 2px;
-  position: absolute;
-  top: 0; left: 0;
-  z-index: 42;
-  box-shadow: 0 1px rgba(0,0,0,0.2) inset, 0 -1px rgba(255,255,255,0.2) inset;
-}
-
-#login:after {
-  content: "";
-  display: block;
-  width: 15.5px;
-  height: 15.5px;
-  background: linear-gradient(to bottom right, #50b8e8, #3095ce);
-  position: absolute;
-  top: 0; left: 20px;
-  transform-origin: top left;
-  transform: rotate(45deg);
-  box-shadow: 0 1px rgba(0,0,0,0.2) inset, -1px 0 rgba(255,255,255,0.2) inset;
-  z-index: 41;
+  background-image: url(assets/signin-button.png);
 }
