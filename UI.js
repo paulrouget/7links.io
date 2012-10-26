@@ -86,9 +86,12 @@ var UI = {
       } else {
         var url = parseURL(url);
         var root = [url.protocol, "//" + url.host, url.port].join(":");
-        var icons = {big: root + "/apple-touch-icon.png", small: root + "/favicon.ico"};
+        var icons;
         if (url.host in BUILTIN_ICONS) {
           icons.big = BUILTIN_ICONS[url.host];
+        } else {
+          icons = {big: root + "/apple-touch-icon.png",
+                   small: root + "/favicon.ico"};
         }
         return icons;
       }
