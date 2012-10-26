@@ -3,9 +3,18 @@
 body {
   margin: 0 auto;
   max-width: 320px;
-  color: #efefef;
-  background-color: rgb(45,45,45);
+  color: #EFEFEF;
+  background-color: #2D2D2D;
   font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 44px;
+  padding: 10px 16px 0;
+  background-image: url(assets/logo-inapp.png);
+  background-size: 28px 33px;
+  background-position: center center;
+  background-repeat; no-repeat;
 }
 
 #links {
