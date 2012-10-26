@@ -234,3 +234,4 @@ var UI = {
 
 
 window.onload = function() {UI.init()}
+console.log("loaded");
