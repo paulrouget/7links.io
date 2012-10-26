@@ -3,6 +3,7 @@ const REMOTE_SYNC_INTERVAL = 60000;
 
 const BUILTIN_ICONS = {
   "twitter.com": "http://i.imgur.com/UJgWfs.png",
+  "mobile.twitter.com": "http://i.imgur.com/UJgWfs.png",
   "facebook.com": "http://i.imgur.com/M0Wi5s.png",
   "duckduckgo.com": "http://i.imgur.com/xEDQcs.png",
   "news.ycombinator.com": "http://i.imgur.com/sAbeIs.png",
