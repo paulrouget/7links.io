@@ -65,11 +65,11 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  image-rendering: -moz-crisp-edges;         /* Firefox */
-  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
 }
 
 .smallicon {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
 }
 
