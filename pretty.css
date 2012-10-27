@@ -137,6 +137,12 @@ header {
 
 /* Responsive */
 
+@media (max-height: 465px) {
+  #links > li {
+    padding: 2px 6px;
+  }
+}
+
 @media (min-width: 800px) {
   .editbutton {
     width: 100px;
