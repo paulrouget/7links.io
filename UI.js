@@ -29,7 +29,7 @@ var UI = {
     if (!urlStr) return;
 
     if (urlStr.indexOf("http") != 0) {
-      return alert("Malformated URL");
+      urlStr = "http://" + urlStr;
     }
 
     var title = prompt("title:");
