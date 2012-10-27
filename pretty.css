@@ -18,7 +18,9 @@ body {
 }
 
 header {
+  -moz-box-sizing: border-box;
   height: 44px;
+  padding: 10px 16px;
   background-image: url(assets/logo-inapp.png);
   background-size: 28px 33px;
   background-position: center center;
@@ -28,18 +30,23 @@ header {
 #login, #edit {
   display:  block;
   height: 100%;
-  width: 56px;
-  background-position: center center;
+  background-position: top left;
   background-repeat: no-repeat;
 }
 
 #login {
   background-image: url(assets/signin-button.png);
   float: left;
+  width: 36px;
 }
 
 #edit {
   float: right;
+  background-image: url(assets/gear.png),
+                    linear-gradient(to bottom, #B9B9B9, #7C7C7C);
+  background-position: center center;
+  border-radius: 3px;
+  width: 24px;
 }
 
 #links {
