@@ -140,6 +140,7 @@ header {
 @media (max-height: 465px) {
   #links > li {
     padding: 2px 6px;
+    border-left: 1px solid red;
   }
 }
 
