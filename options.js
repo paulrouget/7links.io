@@ -11,11 +11,11 @@ const BUILTIN_ICONS = {
 }
 
 const DEFAULT_lINKS = [
-  {title: "Facebook", href: "http://facebook.com"},
   {title: "r/comics", href: "http://imgur.com/r/comics"},
   {title: "Hackernews", href: "http://ihackernews.com"},
   {title: "DuckDuckGo", href: "http://duckduckgo.com"},
-  {title: "Twitter", href: "http://mobile.twitter.com"},
   {title: "Reddit", href: "http://reddit.com/.compact"},
-  {title: ""}
+  {title: ""},
+  {title: ""},
+  {title: ""},
 ];
