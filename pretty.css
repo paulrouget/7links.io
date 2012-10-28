@@ -28,7 +28,7 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
 .title { font-size: 18px; letter-spacing: 2px; }
 .href { font-size: 11px; color: #BBB; }
 
-@media (max-height: 400px) { .text { left: 58px; } .icons { margin-right: 0; border-radius: 0%; } .icons > img { border-radius: 0%; } #links > li > a { padding-left: 0; } }
+@media (max-height: 400px) { .text { left: 58px; } .icons { margin-right: 0; border-radius: 0%; } .icons > div { border-radius: 0%; } #links > li > a { padding-left: 0; } }
 @media (max-height: 340px) { .href { display: none !important; } .title {line-height: 48px}}
 
 .deletebutton { position: absolute; height: 100%; top: 0; right: 0; background-image: radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-image: -webkit-radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-size: 22px 22px; background-repeat: no-repeat; background-position: center center; width: 61px; transform: translateX(61px); transition: 500ms transform ease; -webkit-transform: translateX(61px); -webkit-transition: 500ms -webkit-transform ease; }
