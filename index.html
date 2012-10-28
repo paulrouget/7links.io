@@ -47,12 +47,16 @@
   <body>
 
     <header>
-      <div id="login"></div>
+      <div id="login" onclick="UI.toggleNotification('signout')"></div>
       <div id="edit" onclick="UI.toggleEditing()"></div>
     </header>
 
-    <p id="dialog">
-    </p>
+    <div id="notifications">
+      <p id="signout">
+        Logged as <span id="email">paul@mozilla.com</span><br>
+        <a href="#">Sign out</a>
+      </p>
+    </div>
 
     <ul id="links">
       <li>

@@ -69,6 +69,30 @@ var UI = {
     remote.onPersonaRequest();
   },
 
+  toggleNotification: function(id) {
+    if ($("#" + id + ".active")) {
+      this.hideNotification();
+    } else {
+      this.showNotification(id);
+    }
+  },
+
+  showNotification: function(id) {
+    console.log("showNotification");
+    this.hideNotification();
+    var n = $("#notifications > #" + id);
+    if (!n) return;
+    n.classList.add("active");
+    $("#links").classList.add("undernotification");
+  },
+
+  hideNotification: function() {
+    $$("#notifications > *").forEach(function(n) {
+      n.classList.remove("active");
+    });
+    $("#links").classList.remove("undernotification");
+  },
+
   // INTERNAL ------------------------------------------------------------------
 
   updateLoginButton: function() {
