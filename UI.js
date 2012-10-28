@@ -78,18 +78,18 @@ var UI = {
   },
 
   showNotification: function(id) {
-    this.hideNotification();
     var n = $("#notifications > #" + id);
     if (!n) return;
+    var active = $("#notifications > .active");
+    if (active) {
+      active.classList.remove("active");
+    }
     $("#notifications").classList.add("active");
     n.classList.add("active");
     $("#links").classList.add("undernotification");
   },
 
   hideNotification: function() {
-    $$("#notifications > *").forEach(function(n) {
-      n.classList.remove("active");
-    });
     $("#links").classList.remove("undernotification");
     $("#notifications").classList.remove("active");
   },
