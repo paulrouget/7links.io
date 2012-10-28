@@ -62,6 +62,7 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
            transform: translateY(-60px);
 }
 
+/*
 #links {
   -webkit-transition: -webkit-transform 300ms linear;
           transition: transform 300ms linear;
@@ -70,6 +71,7 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
    -webkit-transform: translateY(60px);
            transform: translateY(60px);
 }
+  */
 
 #notifications > .active {
   transform: none;
