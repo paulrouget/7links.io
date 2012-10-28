@@ -165,6 +165,8 @@ var UI = {
     }
     this._movingLink = e.target.parentNode;
     this._movingLink.classList.add("floating");
+
+    this._moveLink(e);
   },
 
   _stopSorting: function() {
@@ -244,8 +246,6 @@ var UI = {
     elt.style.transform = elt.style.webkitTransform = elt.style.oTransform = elt.style.mozTransform = value;
   },
 };
-
-
 
 
 window.onload = function() {UI.init()}
