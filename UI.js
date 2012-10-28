@@ -70,7 +70,7 @@ var UI = {
   },
 
   toggleNotification: function(id) {
-    if ($("#" + id + ".active")) {
+    if ($("#notifications").classList.contains("active")) {
       this.hideNotification();
     } else {
       this.showNotification(id);
@@ -78,10 +78,10 @@ var UI = {
   },
 
   showNotification: function(id) {
-    console.log("showNotification");
     this.hideNotification();
     var n = $("#notifications > #" + id);
     if (!n) return;
+    $("#notifications").classList.add("active");
     n.classList.add("active");
     $("#links").classList.add("undernotification");
   },
@@ -91,6 +91,7 @@ var UI = {
       n.classList.remove("active");
     });
     $("#links").classList.remove("undernotification");
+    $("#notifications").classList.remove("active");
   },
 
   // INTERNAL ------------------------------------------------------------------
