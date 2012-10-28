@@ -72,6 +72,7 @@ var UI = {
   // INTERNAL ------------------------------------------------------------------
 
   updateLoginButton: function() {
+    return; // FIXME
     var b = $("#personnaButton");
     b.dataset.status = remote.status;
     switch(remote.status) {
@@ -115,15 +116,17 @@ var UI = {
     } else {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
     }
-    html += '<div class="icons"><img class="smallicon"><img class="bigicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + simpleURL + '</span></div></a>';
+    html += '<div class="icons"><div class="smallicon"></div><div class="bigicon"></div></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + simpleURL + '</span></div></a>';
     html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)"></div>';
     li.innerHTML = html;
     this._makeOneLinkOrderAble(li);
     li.dataset.position = position;
 
     var icons = getIconURLs(link.href);
-    li.querySelector(".bigicon").src = icons.big;
-    li.querySelector(".smallicon").src = icons.small;
+    //li.querySelector(".bigicon").src = icons.big;
+    //li.querySelector(".smallicon").src = icons.small;
+    li.querySelector(".bigicon").setAttribute("style", "background-image:url(" + icons.big + ")");
+    li.querySelector(".smallicon").setAttribute("style", "background-image:url(" + icons.small + ")");
   },
 
 

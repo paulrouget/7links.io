@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
-* { margin: 0; padding: 0; -moz-box-sizing: border-box; box-sizing: border-box; border-width: 0}
+* { margin: 0; padding: 0; -moz-box-sizing: border-box; box-sizing: border-box;}
 html { background: #222; height: 100%;}
 body { margin: 0 auto; color: #EFEFEF; background-color: #2D2D2D; font-family: 'Open Sans', sans-serif; height: 100%;}
 
@@ -20,7 +20,7 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
 .text { left: 78px; }
 
 .icons { width: 48px; background-color: rgb(42,42,42); box-shadow: 0 1px 1px rgb(77,77,77), 0 -1px 1px rgb(36,36,36); border-radius: 50%; }
-.icons > img { border-radius: 50%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.icons > div { border-radius: 50%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: 100% 100%}
 .smallicon { image-rendering: -moz-crisp-edges; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
 .icons:before { counter-increment: link 1; content: counter(link); display: inline-block; position: absolute; top: 0; left: 0; line-height: 44px; width: 48px; font-size: 20px; text-align: center; vertical-align: middle; color: #4C4C4C; font-weight: bold; }
 
