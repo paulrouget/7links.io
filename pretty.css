@@ -44,4 +44,5 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 #notifications > *:not(.active) { display: none; }
 #notifications.active:after { content: ""; display: block; position: absolute; top: -5px; left: 20px; width: 12px; height: 12px; background: #222; transform: rotate(45deg); z-index: 9; }
 .undernotification { -webkit-transform: translateY(60px); transform: translateY(60px); }
-#email {color: #EFEFEF}
+#notifications b {color: #EFEFEF}
+#notifications a {color: #00AEEF!important;}
