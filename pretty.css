@@ -54,7 +54,7 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 @media (max-height: 400px) { .text { left: 58px; } .icons { margin-right: 0; border-radius: 0%; } .icons > div { border-radius: 0%; } #links > li > a { padding-left: 0; } }
 @media (max-height: 340px) { .href { display: none !important; } .title {line-height: 48px}}
 
-.deletebutton { position: absolute; height: 100%; top: 0; right: 0; background-image: radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-image: -webkit-radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-size: 22px 22px; background-repeat: no-repeat; background-position: center center; width: 61px; transform: translateX(61px); transition: 500ms transform ease; -webkit-transform: translateX(61px); -webkit-transition: 500ms -webkit-transform ease; }
+.deletebutton { position: absolute; height: 100%; top: 0; right: 0; background-image: radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-image: -webkit-radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-size: 22px 22px; background-repeat: no-repeat; background-position: center center; width: 61px; transform: translateX(61px); transition: 300ms transform ease; -webkit-transform: translateX(61px); -webkit-transition: 300ms -webkit-transform ease; }
 .editmode .deletebutton { transform: none; -webkit-transform: none; }
 .editmode .text, .editmode .icons {pointer-events: none}
 
@@ -66,9 +66,9 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 #notifications {
   font-size: 13px;
   background-color: #222;
-  -webkit-transition: -webkit-transform 100ms linear;
+  -webkit-transition: -webkit-transform 150ms linear;
    -webkit-transform: translateY(-60px);
-          transition: transform 100ms linear;
+          transition: transform 150ms linear;
            transform: translateY(-60px);
 }
 
@@ -90,8 +90,8 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 }
 
 #links {
-  -webkit-transition: -webkit-transform 100ms linear;
-          transition: transform 100ms linear;
+  -webkit-transition: -webkit-transform 150ms linear;
+          transition: transform 150ms linear;
 }
 #links.undernotification {
    -webkit-transform: translateY(60px);
