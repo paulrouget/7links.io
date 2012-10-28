@@ -66,9 +66,9 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 #notifications {
   font-size: 13px;
   background-color: #222;
-  -webkit-transition: -webkit-transform 300ms linear;
+  -webkit-transition: -webkit-transform 100ms linear;
    -webkit-transform: translateY(-60px);
-          transition: transform 300ms linear;
+          transition: transform 100ms linear;
            transform: translateY(-60px);
 }
 
@@ -89,13 +89,11 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
   display: block;
 }
 
-/*
 #links {
-  -webkit-transition: -webkit-transform 300ms linear;
-          transition: transform 300ms linear;
+  -webkit-transition: -webkit-transform 100ms linear;
+          transition: transform 100ms linear;
 }
 #links.undernotification {
    -webkit-transform: translateY(60px);
            transform: translateY(60px);
 }
-  */
