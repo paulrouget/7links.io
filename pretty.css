@@ -4,30 +4,7 @@
 html { background: #222; height: 100%;}
 body { margin: 0 auto; color: #EFEFEF; background-color: #2D2D2D; font-family: 'Open Sans', sans-serif; height: 100%;}
 
-header {
-  position: absolute;
-  top: 0 ; left: 0;
-  height: 45px; width: 100%;
-  z-index: 8;
-  background-color: #2D2D2D;
-}
-
-#notifications {
-  position: absolute;
-  top: 45px ; left: 0;
-  height: 60px; width: 100%;
-  z-index: 7;
-}
-
-#links {
-  position: absolute;
-  top: 45px ; left: 0;
-  height: 60px; width: 100%;
-  height: calc(100%  - 45px); height: -webkit-calc(100%  - 45px); 
-  z-index: 6;
-}
-
-header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); background-position: center center; background-repeat: no-repeat; border-bottom: 1px solid rgb(42,42,42);}
+header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); background-position: center center; background-repeat: no-repeat; border-bottom: 1px solid rgb(42,42,42);position: absolute; top: 0 ; left: 0; height: 45px; width: 100%; z-index: 6; background-color: #2D2D2D;}
 
 #login, #edit { position: absolute; top: 0; height: 45px; }
 #login { left: 0; background-image: url(assets/signin-button.png); background-repeat: no-repeat; background-position: 16px center; width: 50px; } 
@@ -35,7 +12,7 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 #edit:before { content: ""; display: block; width: 100%; height: 100%; border-radius: 3px; background-image: url(assets/gear.png), linear-gradient(to bottom, #B9B9B9, #7C7C7C); background-image: url(assets/gear.png), -webkit-linear-gradient(top, #B9B9B9, #7C7C7C); background-repeat: no-repeat; background-position: center center; }
 .editmode #edit:before { background-image: linear-gradient(to bottom, #00aeef, #0087ba); background-image: -webkit-linear-gradient(top, #00aeef, #0087ba); }
 
-#links { overflow: hidden; counter-reset: link 0;}
+#links { overflow: hidden; counter-reset: link 0; -webkit-transition: -webkit-transform 150ms linear; transition: transform 150ms linear;position: absolute; top: 45px ; left: 0; width: 100%; height: 60px; height: -webkit-calc(100%  - 45px); height: calc(100%  - 45px); z-index: 8;}
 #links > li { list-style: none; position: relative; border-top: 1px solid rgb(63,63,63); border-bottom: 1px solid rgb(42,42,42); background-image: linear-gradient(to bottom, rgb(55,55,55), rgb(51,51,51)); background-image: -webkit-linear-gradient(top, rgb(55,55,55), rgb(51,51,51)); height: 65px; height: calc(100% / 7); height: -webkit-calc(100% / 7); overflow: hidden;}
 #links > li > a { padding: 0 16px; display: inline-block; position: relative; height: 100%; width: 100%; color: #efefef!important; text-decoration: none; } 
 
@@ -63,37 +40,8 @@ header {padding: 10px 16px; background-image: url(assets/logo-inapp.png); backgr
 #links > li.floating { border-top-color: #6DCFF6; border-bottom-color: #006D96; background-image: linear-gradient(to bottom, #00AEEF, #0087Ba); background-image: -webkit-linear-gradient(top, #00AEEF, #0087Ba); z-index: 42; }
 #links > li.floating > .deletebutton { display: none; }
 
-#notifications {
-  font-size: 13px;
-  background-color: #222;
-  -webkit-transition: -webkit-transform 150ms linear;
-   -webkit-transform: translateY(-60px);
-          transition: transform 150ms linear;
-           transform: translateY(-60px);
-}
-
-#notifications.active {
-  transform: none;
-  -webkit-transform: none;
-}
-
-#notifications > * {
-  padding: 10px 0;
-  line-height: 20px;
-  vertical-align: middle;
-  text-align: center;
-  display: none;
-}
-
-#notifications > .active {
-  display: block;
-}
-
-#links {
-  -webkit-transition: -webkit-transform 150ms linear;
-          transition: transform 150ms linear;
-}
-#links.undernotification {
-   -webkit-transform: translateY(60px);
-           transform: translateY(60px);
-}
+#notifications { font-size: 13px; background-color: #222; color: #BBB; padding: 10px 0; line-height: 20px; vertical-align: middle; text-align: center; position: absolute; top: 45px ; left: 0; height: 60px; width: 100%; z-index: 7;}
+#notifications > *:not(.active) { display: none; }
+#notifications.active:after { content: ""; display: block; position: absolute; top: -5px; left: 20px; width: 12px; height: 12px; background: #222; transform: rotate(45deg); z-index: 9; }
+.undernotification { -webkit-transform: translateY(60px); transform: translateY(60px); }
+#email {color: #EFEFEF}
