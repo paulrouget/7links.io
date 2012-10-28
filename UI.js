@@ -39,6 +39,14 @@ var UI = {
     this._buildOneLink(link, position);
   },
 
+  toggleEditing: function() {
+    if (this._editMode) {
+      this.stopEditMode();
+    } else {
+      this.startEditMode();
+    }
+  },
+
   startEditMode: function() {
     this._editMode = true;
     document.body.classList.add("editmode");
@@ -108,8 +116,7 @@ var UI = {
       html = '<a onclick="UI.newLink(this.parentNode.dataset.position)" class="empty">';
     }
     html += '<div class="icons"><img class="smallicon"><img class="bigicon"></div><div class="text"><span class="title">' + link.title + '</span><span class="href">' + simpleURL + '</span></div></a>';
-    html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)">';
-    html += '</div><div class="reorderbutton"></div>';
+    html += '<div class="deletebutton" onclick="UI.deleteLink(this.parentNode.dataset.position)"></div>';
     li.innerHTML = html;
     this._makeOneLinkOrderAble(li);
     li.dataset.position = position;
@@ -130,11 +137,11 @@ var UI = {
   },
 
   _makeOneLinkOrderAble: function(l) {
-    var b = l.querySelector(".reorderbutton");
+    var a = l.querySelector("a");
     if (touchSupported()) {
-      b.addEventListener("touchstart", this._onTouchStart, true);
+      a.addEventListener("touchstart", this._onTouchStart, true);
     } else {
-      b.addEventListener("mousedown", this._onTouchStart, true);
+      a.addEventListener("mousedown", this._onTouchStart, true);
     }
   },
 

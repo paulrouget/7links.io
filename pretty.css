@@ -43,11 +43,15 @@ header {
 
 #edit {
   float: right;
-  background-image: url(assets/gear.png),
-                    linear-gradient(to bottom, #B9B9B9, #7C7C7C);
+  background-image: url(assets/gear.png), linear-gradient(to bottom, #B9B9B9, #7C7C7C);
   background-position: center center;
+  box-shadow: 0 1px 1px #222;
   border-radius: 3px;
-  width: 24px;
+  width: 25px;
+}
+
+.editmode #edit {
+  background-image: linear-gradient(to bottom, #00aeef, #0087ba);
 }
 
 #links {
@@ -56,7 +60,6 @@ header {
 }
 
 #links > li {
-  padding: 5px 10px;
   list-style: none;
   position: relative;
   border-width: 1px 0;
@@ -93,6 +96,8 @@ header {
 }
 
 #links > li > a {
+  -moz-box-sizing: border-box;
+  padding: 5px 10px;
   color: #efefef;
   text-decoration: none;
   display: inline-block;
@@ -139,118 +144,41 @@ header {
 
 @media (max-height: 465px) {
   #links > li {
+    /* FIXME */
     padding: 2px 6px;
-    border-left: 1px solid red;
   }
 }
 
 @media (min-width: 800px) {
-  .editbutton {
-    width: 100px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    color: #999;
-  }
-
-  .editbutton:hover {
-    color: #000;
-  }
-}
-
-/* Personna */
-
-#personnaButton {
-  margin: 10px;
-  border-radius: 3px;
-  height: 62px;
-  line-height: 62px;
-  padding-left: 100px;
-  background-color: white;
-  background-image: url(imgs/persona.png),
-                    linear-gradient(to bottom, #eee 50%, #d2d2d2 50%);
-  background-repeat: no-repeat;
-  background-size: 81px 62px, 100% 100%;
-  cursor: pointer;
-  color: #666;
-}
-
-#personnaButton:hover {
-  color: black;
-}
-
-/* Logs */
-
-#logs {
-  background: white;
-}
-#logs > h1 {
-  font-size: 20px;
-}
-#logs > p {
-  font-size: 14px;
-  border-bottom: 1px solid black;
 }
 
 /* Edition */
 
-.editbutton {
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  padding: 50px;
-  font-size: 24px;
-  background: transparent;
-  border: 0;
-  color: #333;
-}
-
-body.editmode .editbutton.start,
-body:not(.editmode) .editbutton.done {
-  display: none;
-}
-
-.deletebutton, .reorderbutton {
+.deletebutton {
   position: absolute;
-  background: white;
-  width: 72px;
-  height: 72px;
-  background-size: 36px 36px;
-  background-position: 18px 18px;
-  background-repeat: no-repeat;
-  border-left: 1px dotted #ddd;
-  transform: translateX(148px);
+  padding: 18px;
+  top: 0;
+  right: 0;
+  background-color: rgb(124,124,124);
+  background-clip: content-box;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+
+  transform: translateX(58px);
   transition: 500ms transform ease;
 
-  -webkit-transform: translateX(148px);
+  -webkit-transform: translateX(58px);
   -webkit-transition: 500ms -webkit-transform ease;
-  -o-transform: translateX(148px);
+  -o-transform: translateX(58px);
   -o-transition: 500ms -o-transform ease;
 }
 
-body.editmode .deletebutton,
-body.editmode .reorderbutton {
+.editmode .deletebutton {
   transform: none;
   -webkit-transform: none;
   -o-transform: none;
 }
-
-
-.deletebutton {
-  cursor: pointer;
-  top: 0;
-  right: 72px;
-  background-image: url(imgs/delete.svg);
-}
-
-.reorderbutton {
-  cursor: move;
-  top: 0;
-  right: 0;
-  background-image: url(imgs/dnd.svg);
-}
-
 
 #links > li.goup {
   -webkit-transform: translateY(-77px);
@@ -268,6 +196,3 @@ body.editmode .reorderbutton {
   background: blue;
   z-index: 42;
 }
-
-
-

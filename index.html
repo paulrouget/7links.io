@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 
-<title>7links.io</title>
+<html>
+  <head>
+    <title>7links.io</title>
 
-<meta charset=utf-8 />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="pretty.css" rel="stylesheet" type="text/css">
+    <link href="pretty.css" rel="stylesheet" type="text/css">
 
-<!-- The standard way -->
-<link rel="icon" href="icons/favicon.png"          sizes="16x16">
-<link rel="icon" href="icons/icon-dark57x57.png"   sizes="57x57">
-<link rel="icon" href="icons/icon-dark72x72.png"   sizes="72x72">
-<link rel="icon" href="icons/icon-dark114x114.png" sizes="114x114">
+    <!-- The standard way -->
+    <link rel="icon" href="icons/favicon.png"          sizes="16x16">
+    <link rel="icon" href="icons/icon-dark57x57.png"   sizes="57x57">
+    <link rel="icon" href="icons/icon-dark72x72.png"   sizes="72x72">
+    <link rel="icon" href="icons/icon-dark114x114.png" sizes="114x114">
 
-<!-- The Apple way -->
+    <!-- The Apple way -->
 
-<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon" href="icons/icon-dark57x57.png">
-<!-- For first- and second-generation iPad: -->
-<link rel="apple-touch-icon" sizes="72x72" href="icons/icon-dark72x72.png">
-<!-- For iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon" sizes="114x114" href="icons/icon114x114.png">
-<!-- For third-generation iPad with high-resolution Retina display: -->
-<!-- FIXME: link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" -->
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon" href="icons/icon-dark57x57.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-dark72x72.png">
+    <!-- For iPhone with high-resolution Retina display: -->
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/icon114x114.png">
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- FIXME: link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" -->
 
-<title>7links.io</title>
+    <title>7links.io</title>
 
-<!-- FIXME
-. use defer
-. one script?
--->
+    <!-- FIXME
+    . use defer
+    . one script?
+    -->
 
-<script>
-  //delete localStorage.links;
-</script>
+    <script>
+      //delete localStorage.links;
+    </script>
 
-<script src="helpers.js"></script>
-<script src="log.js"></script>
-<script src="UI.js"></script>
-<script src="local.js"></script>
-<script src="https://login.persona.org/include.js"></script>
-<script src="remote.js"></script>
+    <script src="helpers.js"></script>
+    <script src="UI.js"></script>
+    <script src="local.js"></script>
+    <script src="https://login.persona.org/include.js"></script>
+    <script src="remote.js"></script>
+  </head>
+  <body>
 
-<header>
-  <div id="login"></div>
-  <div id="edit"></div>
-</header>
+    <header>
+      <div id="login"></div>
+      <div id="edit" onclick="UI.toggleEditing()"></div>
+    </header>
 
-<ul id="links">
-  <li>
-  <li>
-  <li>
-  <li>
-  <li>
-  <li>
-  <li>
-</ul>
+    <ul id="links">
+      <li>
+      <li>
+      <li>
+      <li>
+      <li>
+      <li>
+      <li>
+    </ul>
 
-<div id="logs"></div>
+  </body>
+</html>
