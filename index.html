@@ -37,10 +37,11 @@
       delete localStorage.links;
     </script>
 
+    <script src="options.js"></script>
     <script src="helpers.js"></script>
     <script src="UI.js"></script>
     <script src="local.js"></script>
-    <script src="https://login.persona.org/include.js"></script>
+    <!--<script src="https://login.persona.org/include.js"></script>-->
     <script src="remote.js"></script>
   </head>
   <body>
@@ -49,6 +50,9 @@
       <div id="login"></div>
       <div id="edit" onclick="UI.toggleEditing()"></div>
     </header>
+
+    <p id="dialog">
+    </p>
 
     <ul id="links">
       <li>
