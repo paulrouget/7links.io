@@ -34,8 +34,6 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
 .deletebutton { position: absolute; height: 100%; top: 0; right: 0; background-image: radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-image: -webkit-radial-gradient(rgb(128,128,128) 65%, transparent 75%); background-size: 22px 22px; background-repeat: no-repeat; background-position: center center; width: 61px; transform: translateX(61px); transition: 500ms transform ease; -webkit-transform: translateX(61px); -webkit-transition: 500ms -webkit-transform ease; }
 .editmode .deletebutton { transform: none; -webkit-transform: none; }
 
-.editmode #links > li > a {pointer-events:none}
-
 #links > li.goup { transform: translateY(-100%); -webkit-transform: translateY(-100%);}
 #links > li.godown { transform: translateY(100%); -webkit-transform: translateY(100%);}
 #links > li.floating { border-top-color: #6DCFF6; border-bottom-color: #006D96; background-image: linear-gradient(to bottom, #00AEEF, #0087Ba); background-image: -webkit-linear-gradient(top, #00AEEF, #0087Ba); z-index: 42; }
