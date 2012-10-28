@@ -123,8 +123,6 @@ var UI = {
     li.dataset.position = position;
 
     var icons = getIconURLs(link.href);
-    //li.querySelector(".bigicon").src = icons.big;
-    //li.querySelector(".smallicon").src = icons.small;
     li.querySelector(".bigicon").setAttribute("style", "background-image:url(" + icons.big + ")");
     li.querySelector(".smallicon").setAttribute("style", "background-image:url(" + icons.small + ")");
   },
