@@ -43,11 +43,12 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
 #notifications {
   position: absolute;
   top: 45px; left: 0;
-  z-index: 7;
+  z-index: 0;
   height: 60px;
   width: 100%;
   overflow: hidden;
   font-size: 13px;
+  background-color: #222;
 }
 
 #notifications > * {
