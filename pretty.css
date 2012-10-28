@@ -56,15 +56,15 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  -webkit-transition: -webkit-transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms linear;
    -webkit-transform: translateY(-60px);
-          transition: transform 300ms ease;
+          transition: transform 300ms linear;
            transform: translateY(-60px);
 }
 
 #links {
-  -webkit-transition: -webkit-transform 300ms ease;
-          transition: transform 300ms ease;
+  -webkit-transition: -webkit-transform 300ms linear;
+          transition: transform 300ms linear;
 }
 #links.undernotification {
    -webkit-transform: translateY(60px);
