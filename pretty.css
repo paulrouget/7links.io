@@ -13,7 +13,7 @@ header { height: 45px; padding: 10px 16px; background-image: url(assets/logo-ina
 .editmode #edit:before { background-image: linear-gradient(to bottom, #00aeef, #0087ba); background-image: -webkit-linear-gradient(top, #00aeef, #0087ba); }
 
 #links { height: calc(100%  - 45px); height: -webkit-calc(100%  - 45px); overflow: hidden; counter-reset: link 0; }
-#links > li { list-style: none; position: relative; border-top: 1px solid rgb(63,63,63); border-top: 1px solid rgb(42,42,42); background-image: linear-gradient(to bottom, rgb(55,55,55), rgb(51,51,51)); background-image: -webkit-linear-gradient(top, rgb(55,55,55), rgb(51,51,51)); height: 65px; height: calc(100% / 7); height: -webkit-calc(100% / 7); overflow: hidden;}
+#links > li { list-style: none; position: relative; border-top: 1px solid rgb(63,63,63); border-bottom: 1px solid rgb(42,42,42); background-image: linear-gradient(to bottom, rgb(55,55,55), rgb(51,51,51)); background-image: -webkit-linear-gradient(top, rgb(55,55,55), rgb(51,51,51)); height: 65px; height: calc(100% / 7); height: -webkit-calc(100% / 7); overflow: hidden;}
 #links > li > a { padding: 0 16px; display: inline-block; position: relative; height: 100%; width: 100%; color: #efefef!important; text-decoration: none; } 
 
 .icons, .text { display: inline-block; position: absolute; height: 48px; top: 50%; margin-top: -24px; }
